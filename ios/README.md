@@ -17,3 +17,33 @@
 - http://zappdesigntemplates.com/collectionview-flow-layout-from-grid-to-list-layout/
 - https://github.com/seapy/awesome/blob/master/iOS/library.md#
 - 아이폰 개발자를 위한 아이콘 셋: http://www.acrosoft.pe.kr/blog/573
+- Hex Color Code를 이용할 수 있게 UIColor 확장하기
+
+```swift
+extension UIColor {
+    convenience init? (fromHex hex: String) {
+        let hexPattern = try! NSRegularExpression(pattern: "^[0-9a-fA-F]{6}$",
+                                                  options: [.anchorsMatchLines])
+        let range =  NSRange(location: 0, length: hex.characters.count)
+        
+        guard hexPattern.matches(in: hex, 
+                                 options: [],
+                                 range: range).count == 1 
+        else { return nil }
+        
+        let positionR = hex.index(hex.startIndex, offsetBy: 2)
+        let positionG = hex.index(hex.startIndex, offsetBy: 4)
+
+        guard let r = Double("0x" + hex.substring(to: positionR)),
+            let g = Double("0x" + hex.substring(with: positionR..<positionG)),
+            let b = Double("0x" + hex.substring(from: positionG)) else { return nil }
+        
+        self.init(red: CGFloat(r / 255), 
+                  green: CGFloat(g / 255), 
+                  blue: CGFloat(b / 255), 
+                  alpha: 1)
+    }
+}
+```
+
+-
