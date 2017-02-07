@@ -46,4 +46,16 @@ extension UIColor {
 }
 ```
 
--
+- Function Parameter Names
+함수의 파라미터는 external parameter name 과 local parameter name 을 둘 다 가진다. external parameter name 은 함수를 호출할 때 arguments에 이름을 지정하기 위해 사용되고, local parameter name 은 함수 내부 구현 안에서 사용이 되는 이름이다.
+```swift
+func someFunction(firstParameterName: Int, secondParameterName: Int) {
+    // function body 시작
+    // firstParameterName 과 secondParameterName 은
+    // 함수로 넘어오는 첫 번째와 두 번째 argument 값을 각각 가리킨다
+}
+someFunction(1, secondParameterName: 2)
+```
+디폴트로 첫 번째 파라미터는 external name이 생략되고, 두번째 파라미터부터는 자신의 local name을 external name으로 사용한다. 모든 파라미터는 반드시 서로 구분되는 local name을 가져야 한다. external name의 경우에는 파라미터 두 개가 동일한 external name을 가져도 컴파일 에러는 나지 않지만, 당연히 서로 구분되게 정의하는 것이 좋다.
+
+> 출처: http://wlaxhrl.tistory.com/10 [찜토끼의 Swift 블로그]
