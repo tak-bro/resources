@@ -16,3 +16,4 @@
 - https://github.com/k-neo/StaggeredGridLayout
 - http://zappdesigntemplates.com/collectionview-flow-layout-from-grid-to-list-layout/
 - https://github.com/seapy/awesome/blob/master/iOS/library.md#
+- 아이폰 개발자를 위한 아이콘 셋: http://www.acrosoft.pe.kr/blog/573
