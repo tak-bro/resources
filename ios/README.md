@@ -66,3 +66,4 @@ someFunction(1, secondParameterName: 2)
 - http://www.slideshare.net/sunhyouplee/realm-60539221
 
 - https://github.com/MengTo/Spring
+- Swift 3 - Alamofilre 4.0 multipart upload with progress: http://www.amaravadee.com/swift-3-alamofilre-4-0-multipart-upload-with-progress/
