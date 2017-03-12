@@ -67,3 +67,8 @@ someFunction(1, secondParameterName: 2)
 
 - https://github.com/MengTo/Spring
 - Swift 3 - Alamofilre 4.0 multipart upload with progress: http://www.amaravadee.com/swift-3-alamofilre-4-0-multipart-upload-with-progress/
+
+## Firebase
+
+- [FireBase, GoogleAuth 설정](https://brunch.co.kr/@tilltue/14)
+- [Google 로그인 구현](https://firebase.google.com/docs/auth/ios/google-signin?hl=ko)
