@@ -109,6 +109,32 @@ $ @powershell -NoProfile -ExecutionPolicy Bypass -Command "[System.Net.WebReques
   - Ctrl + n : Create new console
 
 
+## Perfoce 
+- VS2010에 마켓 플레이스에서 perforce 검색 및 설치
+- option->source control 에서 VS2P4 선택
+- 기존 perforce 의 workspace에서 아래 명령어 치면 서버 세팅 나옴
+- VS2P4 버그 많음. 
+
+### Perfoce config setting
+- vi .p4config
+  - 아래 내용 입력
+```
+P4Client=hyungtak.jin_gCommon
+P4USER=hyungtak.jin
+P4PORT=ssl:helix.engops.health.ge.com:1668
+```
+- 커맨드 창에서 아래 내용 입력 
+```bash
+$ p4 set P4CONFIG=.p4config
+$ p4 info # or p4 set
+```
+
+- Perforce Command  
+  - [Perforce - 탱이의 잡동사니](http://wiki.pchero21.com/wiki/Perforce)
+
+
+
+
 -------------------------
 # TODO
 
