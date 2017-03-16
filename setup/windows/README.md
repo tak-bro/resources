@@ -118,19 +118,20 @@ $ @powershell -NoProfile -ExecutionPolicy Bypass -Command "[System.Net.WebReques
 ### Perfoce config setting
 - vi .p4config
   - 아래 내용 입력
-```
-P4Client=hyungtak.jin_gCommon
-P4USER=hyungtak.jin
-P4PORT=ssl:helix.engops.health.ge.com:1668
-```
+  ```
+  P4Client=hyungtak.jin_gCommon
+  P4USER=hyungtak.jin
+  P4PORT=ssl:helix.engops.health.ge.com:1668
+  ```
 - 커맨드 창에서 아래 내용 입력 
-```bash
-$ p4 set P4CONFIG=.p4config
-$ p4 info # or p4 set
-```
+  ```bash 
+  $ p4 set P4CONFIG=.p4config
+  $ p4 info # or p4 set
+  ```
 
 - Perforce Command  
   - [Perforce - 탱이의 잡동사니](http://wiki.pchero21.com/wiki/Perforce)
+
 
 
 
