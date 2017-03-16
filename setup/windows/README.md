@@ -133,6 +133,17 @@ $ @powershell -NoProfile -ExecutionPolicy Bypass -Command "[System.Net.WebReques
   - [Perforce - 탱이의 잡동사니](http://wiki.pchero21.com/wiki/Perforce)
 
 
+## VIM
+- 특정 단어가 들어있는 라인만 삭제
+```
+:g/<word>/d
+```
+
+- 특정 단어가 들어있는 라인을 제외한 모든 라인 삭제
+```
+:g!/<word>/d
+:v/<word>/d
+```
 
 
 
@@ -189,7 +200,6 @@ https://donjayamanne.gallery.vsassets.io/_apis/public/gallery/publisher/donjayam
 
 
 ``` 
-
 - Download Material-Theme
 ```
 https://zhuangtongfa.gallery.vsassets.io/_apis/public/gallery/publisher/zhuangtongfa/extension/Material-theme/2.2.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage
@@ -197,21 +207,3 @@ https://zhuangtongfa.gallery.vsassets.io/_apis/public/gallery/publisher/zhuangto
 
 
 
-## VIM
-- 특정 단어가 들어있는 라인만 삭제
-```
-:g/<word>/d
-```
-
-- 특정 단어가 들어있는 라인을 제외한 모든 라인 삭제
-```
-:g!/<word>/d
-:v/<word>/d
-```
-
-
-
-## perforce
-- VS2010에 마켓 플레이스에서 perforce 검색 및 설치
-- option->source control 에서 VS2P4 선택
-- 기존 perforce 의 workspace에서 아래 명령어 치면 서버 세팅 나옴
