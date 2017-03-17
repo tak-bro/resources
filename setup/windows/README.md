@@ -1,19 +1,19 @@
 # 윈도우 개발환경 세팅
 
-## Chocolatey
-
+### Chocolatey
 - [Chocolatey](https://chocolatey.org/): The package manager for Windows
 - Install powershell.
   - [https://github.com/PowerShell/PowerShell](https://github.com/PowerShell/PowerShell)
 - Run Cmd
   - Proxy 세팅되어 있을 때 다음 커맨드 실행
-```shell
-$ @powershell -NoProfile -ExecutionPolicy Bypass -Command "[System.Net.WebRequest]::DefaultWebProxy.Credentials = [System.Net.CredentialCache]::DefaultCredentials; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH="%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
-```
-
+  ```shell
+  $ @powershell -NoProfile -ExecutionPolicy Bypass -Command "[System.Net.WebRequest]::DefaultWebProxy.Credentials = [System.Net.CredentialCache]::DefaultCredentials; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH="%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+  ```
 - 설치가 완료되면 이제 cmd에서 choco 커맨드 사용 가능
 
-## Peco
+-------------------------
+
+### Peco
 - Peco: 증분검색을 통한 텍스트 필터링 도구
   - [https://github.com/peco/peco](https://github.com/peco/peco)
 - Install on Windows
@@ -23,7 +23,7 @@ $ @powershell -NoProfile -ExecutionPolicy Bypass -Command "[System.Net.WebReques
   $ choco install peco
   ```
 
-### Pcd 
+#### Pcd 
 - pcd: peco + cd 기능
   - [https://github.com/mattn/pcd](https://github.com/mattn/pcd)
 - 아래 pcd.bat 파일을 만들어서 system32에 넣자.(gvim으로 실행하도록 세팅함)
@@ -79,9 +79,13 @@ $ @powershell -NoProfile -ExecutionPolicy Bypass -Command "[System.Net.WebReques
   $ pcd edit
   ```
 
-## grep 설치
+-------------------
+
+### grep 설치
 - [grep-2.5.4 다운로드](https://sourceforge.net/projects/gnuwin32/files/grep/2.5.4/grep-2.5.4-setup.exe/download?use_mirror=jaist)
-- 한글 안됨..
+- 한글 안됨
+
+----------------------
 
 ### Linux 명령어 툴
 - UnxTools (http://sourceforge.net/projects/unxutils)
@@ -94,12 +98,12 @@ $ @powershell -NoProfile -ExecutionPolicy Bypass -Command "[System.Net.WebReques
 - Gnu 32 설치함
 > Cmder 설치하면 굳이 안해도 될듯
 
-### ConEmu 대신 Cmder 설치
+### ConEmu 대신 **Cmder** 설치
 - Cmder: a software package created out of pure frustration over the absence of **nice console emulators on Windows**
   - [https://github.com/cmderdev/cmder](https://github.com/cmderdev/cmder)
   - ConEmu를 기반으로 좀더 UI 다듬은 버전임
   - 한글과 관련된 버그가 있음
-- Cmder 다운 받고 실행하면 ls 명령어 안먹음
+- Cmder 다운 받고 실행하면 ls 명령어 안먹음. 아래 명령어 실행
    ```bash
    $ alias ls=ls -F --color $*
    ```
@@ -108,14 +112,15 @@ $ @powershell -NoProfile -ExecutionPolicy Bypass -Command "[System.Net.WebReques
   - Ctrl + t : Split-duplicate active 'shell' split to **right**
   - Ctrl + n : Create new console
 
+-----------------------------
 
-## Perfoce 
+### Perfoce 
 - VS2010에 마켓 플레이스에서 perforce 검색 및 설치
 - option->source control 에서 VS2P4 선택
 - 기존 perforce 의 workspace에서 아래 명령어 치면 서버 세팅 나옴
 - VS2P4 버그 많음. 
 
-### Perfoce config setting
+#### Perfoce config setting
 - vi .p4config
   - 아래 내용 입력
   ```
@@ -132,8 +137,14 @@ $ @powershell -NoProfile -ExecutionPolicy Bypass -Command "[System.Net.WebReques
 - Perforce Command  
   - [Perforce - 탱이의 잡동사니](http://wiki.pchero21.com/wiki/Perforce)
 
+---------------------------
 
-## VIM
+### VIM
+- gVim 설치
+- Bundle 설치
+- .vimrc 파일 참고
+
+#### Tips
 - 특정 단어가 들어있는 라인만 삭제
 ```
 :g/<word>/d
@@ -145,65 +156,22 @@ $ @powershell -NoProfile -ExecutionPolicy Bypass -Command "[System.Net.WebReques
 :v/<word>/d
 ```
 
+----------------------------
 
-
--------------------------
-# TODO
 
 ### VSCode
-- proxy 설정
-  - 실패
-- Download VIM
-```
-https://vscodevim.gallery.vsassets.io/_apis/public/gallery/publisher/vscodevim/extension/Vim/0.6.5/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage
-```
-- Download XML Tools
-```
-https://DotJoshJohnson.gallery.vsassets.io/_apis/public/gallery/publisher/DotJoshJohnson/extension/xml/1.7.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage
-```
-- Download C#
-```
-https://ms-vscode.gallery.vsassets.io/_apis/public/gallery/publisher/ms-vscode/extension/csharp/1.7.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage
-```
-- Download Python
-```
-https://donjayamanne.gallery.vsassets.io/_apis/public/gallery/publisher/donjayamanne/extension/python/0.6.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage
-```
-
-- Download vscode_ions
-```
-https://robertohuertasm.gallery.vsassets.io/_apis/public/gallery/publisher/robertohuertasm/extension/vscode-icons/7.3.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage
-```
-
-- Download C/C++
-```
-https://ms-vscode.gallery.vsassets.io/_apis/public/gallery/publisher/ms-vscode/extension/cpptools/0.10.3/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage
-```
-
-- Download Beautify
-```
-https://hookyqr.gallery.vsassets.io/_apis/public/gallery/publisher/HookyQR/extension/beautify/1.0.1/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage
-```
-- Download Debugger for Chrome
-```
-https://msjsdiag.gallery.vsassets.io/_apis/public/gallery/publisher/msjsdiag/extension/debugger-for-chrome/2.6.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage
-```
-
-- Download Go
-```
-https://lukehoban.gallery.vsassets.io/_apis/public/gallery/publisher/lukehoban/extension/Go/0.6.55/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage
-```
-
-- Download Git History
-```
-https://donjayamanne.gallery.vsassets.io/_apis/public/gallery/publisher/donjayamanne/extension/githistory/0.2.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage
-
-
-``` 
-- Download Material-Theme
-```
-https://zhuangtongfa.gallery.vsassets.io/_apis/public/gallery/publisher/zhuangtongfa/extension/Material-theme/2.2.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage
-```
+- Download link for installed extensions
+  - [VIM](https://vscodevim.gallery.vsassets.io/_apis/public/gallery/publisher/vscodevim/extension/Vim/0.6.5/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage)
+  - [XML Tools](https://DotJoshJohnson.gallery.vsassets.io/_apis/public/gallery/publisher/DotJoshJohnson/extension/xml/1.7.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage)
+  - [C#](https://ms-vscode.gallery.vsassets.io/_apis/public/gallery/publisher/ms-vscode/extension/csharp/1.7.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage)
+  - [Python](https://donjayamanne.gallery.vsassets.io/_apis/public/gallery/publisher/donjayamanne/extension/python/0.6.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage)
+  - [vscode_icons](https://robertohuertasm.gallery.vsassets.io/_apis/public/gallery/publisher/robertohuertasm/extension/vscode-icons/7.3.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage)
+  - [C/C++](https://ms-vscode.gallery.vsassets.io/_apis/public/gallery/publisher/ms-vscode/extension/cpptools/0.10.3/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage)
+  - [Beautify](https://hookyqr.gallery.vsassets.io/_apis/public/gallery/publisher/HookyQR/extension/beautify/1.0.1/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage)
+  - [Debegger for Chrome](https://msjsdiag.gallery.vsassets.io/_apis/public/gallery/publisher/msjsdiag/extension/debugger-for-chrome/2.6.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage)
+  - [Go](https://lukehoban.gallery.vsassets.io/_apis/public/gallery/publisher/lukehoban/extension/Go/0.6.55/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage)
+  - [Git History](https://donjayamanne.gallery.vsassets.io/_apis/public/gallery/publisher/donjayamanne/extension/githistory/0.2.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage)
+  - [Material-Theme](https://zhuangtongfa.gallery.vsassets.io/_apis/public/gallery/publisher/zhuangtongfa/extension/Material-theme/2.2.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage)
 
 
 
