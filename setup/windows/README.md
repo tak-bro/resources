@@ -28,7 +28,7 @@
   - [https://github.com/mattn/pcd](https://github.com/mattn/pcd)
 - 아래 pcd.bat 파일을 만들어서 system32에 넣자.(gvim으로 실행하도록 세팅함)
 - 해당 배치파일 실행하면 .peco-cd 파일이 만들어지는데, 이 파일이 폴더 경로를 저장하는 파일이다.
-  ```bat
+  ```cmd
   @echo off
   set PCD_CONFIG=%USERPROFILE%\.pcd
 
@@ -111,6 +111,7 @@
   - Ctrl + Shift + t: Split-duplicate active 'shell' split to **bottom**
   - Ctrl + t : Split-duplicate active 'shell' split to **right**
   - Ctrl + n : Create new console
+  - Ctrl + w : 지워줘야함 
 
 -----------------------------
 
@@ -141,8 +142,28 @@
 
 ### VIM
 - gVim 설치
-- Bundle 설치
-- .vimrc 파일 참고
+
+~~- spf13-vim: a distribution of vim plugins and resources for Vim, Gvim and MacVim.~~
+
+   ~~- [https://github.com/spf13/spf13-vim](https://github.com/spf13/spf13-vim)~~
+
+~~- Install spf13-vim (처리하는데 좀 느림. 프록시 때문인지..)~~
+
+~~```bash~~
+~~$ choco install spf13-vim~~
+~~```~~
+
+~~- 설치되는게 너무 많다. 나중에 지울 필요 있음~~
+
+- [https://github.com/amix/vimrc](https://github.com/amix/vimrc)
+```bash
+$ git clone https://github.com/amix/vimrc.git ~/.vim_runtime
+$ sh ~/.vim_runtime/install_awesome_vimrc.sh
+```
+- 로딩하는데 오래걸려서 extension은 지움 
+  - .vimrc 파일 수정 
+  
+
 
 #### Tips
 - 특정 단어가 들어있는 라인만 삭제
@@ -173,5 +194,45 @@
   - [Git History](https://donjayamanne.gallery.vsassets.io/_apis/public/gallery/publisher/donjayamanne/extension/githistory/0.2.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage)
   - [Material-Theme](https://zhuangtongfa.gallery.vsassets.io/_apis/public/gallery/publisher/zhuangtongfa/extension/Material-theme/2.2.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage)
 
+------------------------------
 
+### 윈도우 단축키
+- 윈도우 단축키 
+  - 윈도우 키 + E : 윈도우 탐색기 실행 / 내컴퓨터와 동일
+  - 윈도우 키 + F : 윈도우 검색창 실행 / 시작-검색과 동일
+  - 윈도우 키 + R : 윈도우 실행창 실행 / 시작-실행
+  - 윈도우 키 + D : 모든 창 최소화 / 단축키 다시 누르면 원래대로 돌아옴
+  - 윈도우 키 + pause Break : 윈도우 시스템 정보 실행
 
+- 실행창 명령어
+  - notepad : 메모장
+  - calc : 계산기
+  - mspaint : 그림판
+  - clipbrd : 클립북 뷰어
+  - cmd : 도스창
+  - dxdiag : 다이렉트 X 진단도구
+  - iexplore : 익스플로러
+  - mstsc : 원격 데스크탑
+  - osk : 화상키보드
+  - winword : ms office 워드
+  - powerpnt : ms office 파워포인트
+  - excel : ms office 엑셀
+  - outlook : ms office 아웃룩
+  - wordpad : 워드패드
+  - winmine : 지뢰찾기
+  - sndvol : 볼륨조절
+
+- 관리콘솔 명령어
+  - certmgr.msc : 인증서
+  - ntmsmgr.msc : 이동식 저장소
+  - ntmsoprq.msc : 이동식 저장소 운영자 요청
+  - compmgmt.msc : 컴퓨터관리
+  - devmgmt.msc : 장치관리자
+  - diskmgmt.msc : 디스크 관리
+  - dfrg.msc : 디스크 조각모음
+  - eventvwr.msc : 이벤트 뷰어
+  - fsmgmt.msc : 공유폴더
+  - perfmon.msc : 성능모니터뷰
+  - services.msc : 서비스
+
+- start . #탐색기 실행
