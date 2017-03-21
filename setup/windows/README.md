@@ -136,6 +136,19 @@
   ```
 
 - Perforce Command  
+  ```bash
+  $ p4 sync # git pull
+  $ p4 opened # 현재 편집중인 파일 목록을 보여준다.
+  $ p4 change -U user [-t restricted | public] [-f] changelist# #현재 위치한 디렉토리에서의 상세 변경 내역 내용을 보여준다.
+  $ p4 changes [options] [file[revRange] ...] #모든 변경 내역 리스트를 보여준다.
+  $ p4 edit -c [changelist#] 
+  $ p4 shelve
+  $ p4 submit
+  $ p4 resolve [options] [file ...] # Integrate 이후의 merge 충돌 오류를 해결한다.
+  $ p4 clean #모든 submit되지 않은 변경 이력들을 원본으로 되돌린다.
+  $ p4 revert [-a -n -k -w -c changelist#] file ... #변경/수정 된 내용을 다시 이전으로 되돌린다.
+  ```
+
   - [Perforce - 탱이의 잡동사니](http://wiki.pchero21.com/wiki/Perforce)
 
 ---------------------------
@@ -162,10 +175,13 @@ $ sh ~/.vim_runtime/install_awesome_vimrc.sh
 ```
 - 로딩하는데 오래걸려서 extension은 지움 
   - .vimrc 파일 수정 
-  
+
 
 
 #### Tips
+- Key map
+  - <C-S-UP>: Ctrl + Shift + Arrow Up key
+
 - 특정 단어가 들어있는 라인만 삭제
 ```
 :g/<word>/d
