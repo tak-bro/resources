@@ -134,19 +134,34 @@
   $ p4 set P4CONFIG=.p4config
   $ p4 info # or p4 set
   ```
+- 내가 쓰는 것들
+  ```bash
+  $ p4 sync # git pull
+  $ p4 opened # appear opened list in current workspace including changelist, file name
+  $ p4 edit -c [changelist] [file name] # checkout to default 
+  # ex) p4 edit -c 123456 e:\project\main.cpp
+  $ p4 revert -a [file name] # force to revert file
+  # ex) p4 revert -a e:\project\main.cpp
+  $ p4 reopen -c [changelist] [file name] # move file from default changelist to other
+  # ex) p4 reopen -c 123456 e:\project\main.cpp
+
+  # 이건 확인해야함
+  $ p4 submit
+  ```
+
 
 - Perforce Command  
   ```bash
   $ p4 sync # git pull
   $ p4 opened # 현재 편집중인 파일 목록을 보여준다.
-  $ p4 change -U user [-t restricted | public] [-f] changelist# #현재 위치한 디렉토리에서의 상세 변경 내역 내용을 보여준다.
+  $ p4 change -U user [-t restricted | public] [-f] changelist #현재 위치한 디렉토리에서의 상세 변경 내역 내용을 보여준다.
   $ p4 changes [options] [file[revRange] ...] #모든 변경 내역 리스트를 보여준다.
-  $ p4 edit -c [changelist#] 
+  $ p4 edit -c [changelist] 
   $ p4 shelve
   $ p4 submit
   $ p4 resolve [options] [file ...] # Integrate 이후의 merge 충돌 오류를 해결한다.
   $ p4 clean #모든 submit되지 않은 변경 이력들을 원본으로 되돌린다.
-  $ p4 revert [-a -n -k -w -c changelist#] file ... #변경/수정 된 내용을 다시 이전으로 되돌린다.
+  $ p4 revert [-a -n -k -w -c changelist] file ... #변경/수정 된 내용을 다시 이전으로 되돌린다.
   ```
 
   - [Perforce - 탱이의 잡동사니](http://wiki.pchero21.com/wiki/Perforce)
