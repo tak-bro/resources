@@ -28,17 +28,29 @@
   - [https://github.com/mattn/pcd](https://github.com/mattn/pcd)
 - 아래 pcd.bat 파일을 만들어서 system32에 넣자.(gvim으로 실행하도록 세팅함)
 - 해당 배치파일 실행하면 .peco-cd 파일이 만들어지는데, 이 파일이 폴더 경로를 저장하는 파일이다.
+- 프로젝트 별로 관리하기 위해서 project 관련 변수 추가
   ```cmd
   @echo off
-  set PCD_CONFIG=%USERPROFILE%\.pcd
+  set currentProject=%PROJECT%
+  set pecoFile=%USERPROFILE%\.peco-cd2
+
+  echo %VIEWROOT%|findstr "test2" >nul
+  if errorlevel 1 (
+      echo Filtering test1 on %pecoFile%
+  ) else (
+      SET pecoFile=%USERPROFILE%\.peco-cd25
+      echo Filtering test2 directory on %pecoFile%
+  )
+
 
   if "%1" equ "add" (
     if "%2" neq "" (
-      echo %~dpf2>> "%PCD_CONFIG%"
+      echo %2 >> "%pecoFile%"
       goto end
     )
     goto usage
   )
+
   if "%1" equ "edit" (
     goto edit
   )
@@ -53,20 +65,21 @@
 
   :edit
   if "%EDITOR%" neq "" (
-    "%EDITOR%" "%PCD_CONFIG%"
+    "%EDITOR%" "%pecoFile%"
     goto end
   )
-  gvim "%PCD_CONFIG%"
+  gvim %pecoFile%
   goto end
 
   :query
   rem NOTE:
   rem
   rem If you have a problem caused by character-set, modify below part like:
-  rem   'type ^"%USERPROFILE%\.pcd^" ^| iconv -f char -t utf-8 ^| peco --null'
+  rem   'type ^"%USERPROFILE%\.peco-cd^" ^| iconv -f char -t utf-8 ^| peco'
   rem
-  for /f "delims=" %%i in ('type ^"%PCD_CONFIG%^" ^| peco') do (
-    cd /D %%i
+  rem for /f %%i in ('type ^"%USERPROFILE%\.peco-cd^" ^| peco') do (
+  for /f %%i in ('type ^%pecoFile% ^| peco') do (
+    cd %%i
     break
   )
 
@@ -78,6 +91,7 @@
   or
   $ pcd edit
   ```
+- pcd2, pcd25 로 만들어 프로젝트 별로 관리 
 
 -------------------
 
