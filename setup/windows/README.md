@@ -16,6 +16,12 @@
 ### Peco
 - Peco: 증분검색을 통한 텍스트 필터링 도구
   - [https://github.com/peco/peco](https://github.com/peco/peco)
+  > 증분검색
+  > - 컴퓨터에서 사용자가 글자를 입력하는 도중에 계속적으로 해당하는 내용을 찾아주는 기능. 
+  > - 사용자가 입력하는 과정에서 최근까지 입력된 부분과 일치되는 문자열을 검색하며, 검색된 문자열은 프로그램에 따라서 눈에 띄는 배경색 등으로 강조되기도 한다.
+  > - 모질라 진영의 표현으로는 ‘Find As You Type’이라고 하기도 한다. 그 밖의 표현으로는 "search as you type, filter as you type (FAYT), incremental search, typeahead search, inline search, instant search, word wheeling"이 있다.
+  
+
 - Install on Windows
   - 위의 choco가 설치되어 있어야 한다. 
   - 다음 커맨드로 설치

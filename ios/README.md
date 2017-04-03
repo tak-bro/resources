@@ -72,3 +72,8 @@ someFunction(1, secondParameterName: 2)
 
 - [FireBase, GoogleAuth 설정](https://brunch.co.kr/@tilltue/14)
 - [Google 로그인 구현](https://firebase.google.com/docs/auth/ios/google-signin?hl=ko)
+
+
+## Tool
+- [FengNiao](https://github.com/onevcat/FengNiao): simple command-line util to deleting unused image resource files from you Xcode project.
+- [SwiftLint](https://github.com/realm/SwiftLint): A tool to enforce Swift style and conventions, loosely based on GitHub's Swift Style Guide.
