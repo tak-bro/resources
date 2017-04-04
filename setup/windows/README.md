@@ -216,6 +216,15 @@ $ sh ~/.vim_runtime/install_awesome_vimrc.sh
 #### Tips
 - Key map
   - <C-S-UP>: Ctrl + Shift + Arrow Up key
+- Ctrl + a:  숫자 증가
+  - 매크로 활용 가능
+  ```bash 
+  1. q + a  # a키에 recodring 시작
+  2. vi에서 동작 수행
+  3. q # recodring 종료
+  4. @a # 1회 실행
+  5. 10@a # 10회 실행
+  ```
 
 - 특정 단어가 들어있는 라인만 삭제
 ```
