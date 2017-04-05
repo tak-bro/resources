@@ -114,7 +114,6 @@
     - [PyUnit](http://pyunit.sourceforge.net/): the standard unit testing framework for Python
     - [pytest](https://docs.pytest.org/en/latest/): a mature full-featured Python testing tool
     - [doctest](https://ko.wikipedia.org/wiki/Doctest): 파이썬 언어의 표준 라이브러리로 표준 파이썬 인터프리터 셸 입출력을 주석문자열에 복사 첨부함으로부써 간단하게 프로그램 테스트를 적용시킬 수 있게 해준다.
-    
 - Sync Framework
     - [Django](https://www.djangoproject.com/): a high-level Python Web framework that encourages rapid development and clean, pragmatic design
     - [Flask](http://flask.pocoo.org/): a microframework for Python based on Werkzeug, Jinja 2 and good intentions
@@ -126,13 +125,84 @@
 
 #### Node.js
 - Pacakge Manager
+    - [npm](https://www.npmjs.com/): the package manager for JavaScript and the world's largest software registry
+    - [yarn](https://yarnpkg.com/en/): Fast, reliable, and secure dependency management
 - Testing 
+    - [Mocha](https://mochajs.org/): the fun, simple, flexible JavaScript test framework
+    - [Jest](https://facebook.github.io/jest/): used by Facebook to test all JavaScript code including React applications
+    - [Chai](http://chaijs.com/): a BDD / TDD assertion library for [node](http://nodejs.org) and the browser that can be delightfully paired with any javascript testing framework
+    - [Jasmine](https://jasmine.github.io/): Behavior-driven development framework for testing JavaScript code
+    - [should.js](http://shouldjs.github.io/): BDD style assertions for node.js
 - Framework
+    - [Express](https://expressjs.com/): Fast, unopinionated, minimalist web framework for node
+    - [hapi](https://hapijs.com/): A rich framework for building applications and services
+    - [Koa](http://koajs.com/): a new web framework designed by the team behind Express, which aims to be a smaller, more expressive, and more robust foundation for web applications and APIs
+    - [Sails.js](http://sailsjs.com/): Realtime MVC Framework for Node.js
+
+---------------
 
 
+### Web Server
 
 
+### RESTful APIs
+#### NginX
+#### Apache
+#### Caddy
 
+----------
+
+### Read about MVC
+
+### Authentication
+#### JWT(JSON Web Token)
+#### OAuth 2.0
+
+-----------
+
+### SOLID, YAGNI, KISS etc
+
+------------
+
+### Regular Expressions
+
+------------
+
+### Security
+
+-----------
+
+### Docker
+
+-----------
+
+### GraphQL
+
+---------
+
+### Storage
+
+#### Caching
+##### Memcached
+##### Redis
+
+#### Relational Databases
+##### MySQL
+##### MariaDB
+##### PostgreSQL
+##### MSSQL
+##### Oracle
+
+
+#### NoSQL Databases
+##### Redis
+##### MongoDB
+##### Cassandra
+##### RethinkDB
+##### Couchbase
+
+
+-------------
 
 
 
