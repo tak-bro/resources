@@ -1,4 +1,4 @@
-# 윈도우 개발환경 세팅
+# 윈도우 개발환경 세팅 in company
 
 ### Chocolatey
 - [Chocolatey](https://chocolatey.org/): The package manager for Windows
@@ -7,12 +7,58 @@
 - Run Cmd
   - Proxy 세팅되어 있을 때 다음 커맨드 실행
   ```shell
-  $ @powershell -NoProfile -ExecutionPolicy Bypass -Command "[System.Net.WebRequest]::DefaultWebProxy.Credentials = [System.Net.CredentialCache]::DefaultCredentials; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH="%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+   @powershell -NoProfile -ExecutionPolicy Bypass -Command "[System.Net.WebRequest]::DefaultWebProxy.Credentials = [System.Net.CredentialCache]::DefaultCredentials; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH="%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
   ```
 - 설치가 완료되면 이제 cmd에서 choco 커맨드 사용 가능
 
 -------------------------
 
+### Node.js
+- NVM 설치
+  - [nvm-windows](https://github.com/coreybutler/nvm-windows): windows용 nvm
+  - 설치하면 아래 방법으로 안해도 됨
+  - **사내 proxy 설정**
+  ```bash
+  $ nvm proxy http://...............:80
+  ```
+  - 이후 latest 버전 설치
+  ```bash
+  $ nvm install latest
+  Downloading node.js version 7.8.0 (64-bit)...                                 
+  Complete                                                                      
+  Creating C:\Users\212468457\AppData\Roaming\nvm\temp                          
+                                                                              
+  Downloading npm version 4.2.0... Complete                                     
+  Installing npm v4.2.0...                                                      
+                                                                              
+  Installation complete. If you want to use this version, type                  
+                                                                              
+  nvm use 7.8.0                                                                 
+  $ nvm use 7.8.0  
+  Now using node v7.8.0 (64-bit)
+  ```
+- shell을 껐다 키면 node, npm 명령어 사용 가능
+  - npm 설치 안됨(proxy 때문에)
+  - **사내 proxy 서버 설정해줘야 함**
+  ```
+  $ npm config set http://........:80
+  $ npm config set https-proxy http://........:80
+  $ npm confg set strict-ssl false
+  ```
+
+- 위 proxy 설정 후 express 설치됨
+  ```
+  $ npm install express -g
+  $ npm install express-generator -g
+  ```
+
+~~- 커맨드 실행~~
+  ~~```shell~~
+  ~~$ choco install nodejs.install~~
+  ~~$ choco install yarn~~
+  ~~```~~
+
+-------
 ### Peco
 - Peco: 증분검색을 통한 텍스트 필터링 도구
   - [https://github.com/peco/peco](https://github.com/peco/peco)
