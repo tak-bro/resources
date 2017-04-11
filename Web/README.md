@@ -1,6 +1,5 @@
 # [Web Developer RoadMap - 2017](https://github.com/kamranahmedse/developer-roadmap)
 
-
 ## Instroduction
 ![Introduction](introduction.png)
 -------
@@ -96,6 +95,7 @@
 #### Java(Grails, Spring, Play)
 #### Go
 #### PHP 7
+
 #### Ruby
 - Package Manager
     - [RubyGems](https://rubygems.org/): easily download, install, and use ruby software packages
@@ -138,7 +138,6 @@
     - [hapi](https://hapijs.com/): A rich framework for building applications and services
     - [Koa](http://koajs.com/): a new web framework designed by the team behind Express, which aims to be a smaller, more expressive, and more robust foundation for web applications and APIs
     - [Sails.js](http://sailsjs.com/): Realtime MVC Framework for Node.js
-
 - Node.js란 무엇인가
     - Chrome Javascript Engine V8 기반의 플랫폼
         - V8은 Google에 의해서 C++로 개발된 오픈 소스 자바스크립트 엔진
@@ -149,23 +148,19 @@
     - Single Thread 기반의 Non-Blocking I/O model 사용
         - 노드를 사용하는 가장 중요한 이유중 하나는 비동기형 방식이다.
         - 우선 Multi thread이란?
-        
             ![Multi-thread](https://cloud.githubusercontent.com/assets/7614353/20128452/78c51038-a68b-11e6-8b26-3ff418da0bf2.png)
             - 동시에 Service할 수 있는 Client의 수는 Thread Pool안에 있는 가용한 Thread의 수와 동일
             - 일반적으로 Thread Pool안의 Thread는 500~2000. ( 2000을 넘는 경우는 거의 없다. )
             - 할당된 Thread가 IO작업( Network, File, DB )을 하게 되면 blocking 방식으로 처리되어 해당 Thread가 CPU를 사용하지 않는 상태(wait 상태)로 변환.
             - 즉, IO 시간만큼 Thread는 blocking.
         - Node.js 는 Single Thread로 구성되어 있다. 내부적으로는 Thread Pool 로 구성되어 있다.
-            
             ![Non-Blocking I/O Model](https://cloud.githubusercontent.com/assets/7614353/20128262/3c0656c6-a68a-11e6-91d9-d11ad67cafb8.png)
             - 다양한 요인들이 결합된 데이터에 대한 통계적 분석 연산의 경우 다중 스레드 모델이 더 적합하다. 필요한 구간에 여러 개의 스레드를 배치해 시스템 자원을 최대한 활용하여 빠르게 연산을 완료하도록 설계할 수 있다.
             - 하지만 이와 같은 상황을 모든 프로그램이 맞닥뜨리는 것은 아니다. 요청에 대한 빠른 반응을 요구하는 네트워크 서버의 프로그램의 경우 단일 스레드 모델이 더 적합할 수도 있다. 하나의 스레드만 이용하는 방식은 다음과 같은 장점이 있다.
             - 자원 접근에 대한 동기화를 신경 쓰지 않아도 된다. 여러 개의 스레드가 공유된 자원을 사용할 경우 각 스레드가 원하는 결과를 얻게 하려면 공용 자원에 대한 접근이 통제되어야 하며 이 작업은 프로그래머에게 많은 노력을 요구하고 비용 또한 발생한다. 단일 스레드 모델에서는 이러한 작업이 필요 없다.
             - 문맥 교환(context switch) 작업을 요구하지 않는다. 문맥 교환은 여러 개의 프로세스가 하나의 프로세서를 공유할 때 발생하는 작업으로 많은 비용을 필요로 한다.
-            
     - Event-Based Asynchronous Pattern
         ![Processing model](https://cloud.githubusercontent.com/assets/7614353/20128535/fdc2d6bc-a68b-11e6-95c2-2e9ae0ff80da.png)
-
         - 비동기 동작의 과정과 결과를 이벤트로 통보하는 형식을 취하고 있다.
         - 비동기 작업이 시작되면 해당 작업의 진행 상황을 이벤트로 외부에 전달하는 기능을 포함하고 있으며, 해당 작업이 종료되면 마찬가지로 작업 종료 이벤트를 발생시키는 기능을 포함하고 있다.
         - Ref: [Node.js - 노드 : 특징](http://posnopi13.tistory.com/28)

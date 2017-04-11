@@ -14,9 +14,7 @@
   ```bash
   $ choco install openssh
   $ choco install mongodb
-
   ```
-
 
 -------------------------
 
@@ -73,8 +71,6 @@
   > - 컴퓨터에서 사용자가 글자를 입력하는 도중에 계속적으로 해당하는 내용을 찾아주는 기능. 
   > - 사용자가 입력하는 과정에서 최근까지 입력된 부분과 일치되는 문자열을 검색하며, 검색된 문자열은 프로그램에 따라서 눈에 띄는 배경색 등으로 강조되기도 한다.
   > - 모질라 진영의 표현으로는 ‘Find As You Type’이라고 하기도 한다. 그 밖의 표현으로는 "search as you type, filter as you type (FAYT), incremental search, typeahead search, inline search, instant search, word wheeling"이 있다.
-  
-
 - Install on Windows
   - 위의 choco가 설치되어 있어야 한다. 
   - 다음 커맨드로 설치
@@ -217,12 +213,9 @@
   # ex) p4 revert -a e:\project\main.cpp
   $ p4 reopen -c [changelist] [file name] # move file from default changelist to other
   # ex) p4 reopen -c 123456 e:\project\main.cpp
-
   # 이건 확인해야함
   $ p4 submit
   ```
-
-
 - Perforce Command  
   ```bash
   $ p4 sync # git pull
@@ -236,26 +229,20 @@
   $ p4 clean #모든 submit되지 않은 변경 이력들을 원본으로 되돌린다.
   $ p4 revert [-a -n -k -w -c changelist] file ... #변경/수정 된 내용을 다시 이전으로 되돌린다.
   ```
-
   - [Perforce - 탱이의 잡동사니](http://wiki.pchero21.com/wiki/Perforce)
 
 ---------------------------
 
 ### VIM
 - gVim 설치
-
 ~~- spf13-vim: a distribution of vim plugins and resources for Vim, Gvim and MacVim.~~
-
    ~~- [https://github.com/spf13/spf13-vim](https://github.com/spf13/spf13-vim)~~
-
 ~~- Install spf13-vim (처리하는데 좀 느림. 프록시 때문인지..)~~
 
 ~~```bash~~
 ~~$ choco install spf13-vim~~
 ~~```~~
-
 ~~- 설치되는게 너무 많다. 나중에 지울 필요 있음~~
-
 - [https://github.com/amix/vimrc](https://github.com/amix/vimrc)
 ```bash
 $ git clone https://github.com/amix/vimrc.git ~/.vim_runtime
@@ -263,8 +250,6 @@ $ sh ~/.vim_runtime/install_awesome_vimrc.sh
 ```
 - 로딩하는데 오래걸려서 extension은 지움 
   - .vimrc 파일 수정 
-
-
 
 #### Tips
 - Key map
@@ -278,12 +263,10 @@ $ sh ~/.vim_runtime/install_awesome_vimrc.sh
   4. @a # 1회 실행
   5. 10@a # 10회 실행
   ```
-
 - 특정 단어가 들어있는 라인만 삭제
 ```
 :g/<word>/d
 ```
-
 - 특정 단어가 들어있는 라인을 제외한 모든 라인 삭제
 ```
 :g!/<word>/d
@@ -292,8 +275,16 @@ $ sh ~/.vim_runtime/install_awesome_vimrc.sh
 
 ----------------------------
 
-
 ### VSCode
+- Go to [File] [Preferences] [User Settings]
+  - 사내 프록시 설정
+  ```json
+  // Place your settings in this file to overwrite the default settings
+  {
+      "http.proxyStrictSSL": false,
+      "http.proxy": "http://..........:80"
+  }
+  ```
 - Download link for installed extensions
   - [VIM](https://vscodevim.gallery.vsassets.io/_apis/public/gallery/publisher/vscodevim/extension/Vim/0.6.5/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage)
   - [XML Tools](https://DotJoshJohnson.gallery.vsassets.io/_apis/public/gallery/publisher/DotJoshJohnson/extension/xml/1.7.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage)
@@ -316,7 +307,6 @@ $ sh ~/.vim_runtime/install_awesome_vimrc.sh
   - 윈도우 키 + R : 윈도우 실행창 실행 / 시작-실행
   - 윈도우 키 + D : 모든 창 최소화 / 단축키 다시 누르면 원래대로 돌아옴
   - 윈도우 키 + pause Break : 윈도우 시스템 정보 실행
-
 - 실행창 명령어
   - notepad : 메모장
   - calc : 계산기
@@ -334,7 +324,6 @@ $ sh ~/.vim_runtime/install_awesome_vimrc.sh
   - wordpad : 워드패드
   - winmine : 지뢰찾기
   - sndvol : 볼륨조절
-
 - 관리콘솔 명령어
   - certmgr.msc : 인증서
   - ntmsmgr.msc : 이동식 저장소
@@ -347,5 +336,4 @@ $ sh ~/.vim_runtime/install_awesome_vimrc.sh
   - fsmgmt.msc : 공유폴더
   - perfmon.msc : 성능모니터뷰
   - services.msc : 서비스
-
 - start . #탐색기 실행
