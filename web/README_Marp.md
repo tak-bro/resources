@@ -1,6 +1,6 @@
 <!-- page_number: true --> 
 
-Web Develop
+Web Development
 ===
 
 ---
@@ -226,4 +226,130 @@ Web Develop
 - 비동기 동작의 과정과 결과를 이벤트로 통보하는 형식
 - 비동기 작업이 시작되면 해당 작업의 진행 상황을 이벤트로 외부에 전달하는 기능을 포함하고 있으며, 해당 작업이 종료되면 마찬가지로 작업 종료 이벤트를 발생시킨다.
 
+---
+
+## How to install Node.js on GE network
+
+---
+##### Chocolatey
+- [Chocolatey](https://chocolatey.org/): The package manager for Windows
+- Chocolatey를 설치하기 위해선 Powershell 먼서 설치해야 함
+	- [https://github.com/PowerShell/PowerShell](https://github.com/PowerShell/PowerShell)
+- Powershell에서 아래 커맨드 실행
+```shell
+@powershell -NoProfile -ExecutionPolicy Bypass -Command "[System.Net.WebRequest]::DefaultWebProxy.Credentials = [System.Net.CredentialCache]::DefaultCredentials; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH="%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+ ```
+- 설치가 완료되면 cmd에서 choco 커맨드 사용 가능
+```bash
+$ choco
+Chocolatey v0.10.3
+```
+------
+
+##### Chocolatey(Continued)
+- 다음 커맨드 실행
+ ```bash
+ $ choco install nodejs.install
+ $ choco install yarn
+ ```
+> Nodejs 뿐만 아니라 다른 프로그램들도 간편하게 설치 가능
+
+-------------------------
+
+##### NVM
+- Node.js 설치하는 또 다른 방법(**추천**)
+- [NVM](https://github.com/creationix/nvm): Node Version Manager
+  - [nvm-windows](https://github.com/coreybutler/nvm-windows): windows용 nvm
+  - 기존에 있던 Nodejs는 삭제해야 함
+- **NVM 설치 후 GEproxy 설정해줘야 함**
+```bash
+$ nvm proxy http://ge.com:80
+```
+---
+
+##### NVM(Continued)
+- Nodejs latest 버전 설치
+```bash
+$ nvm install latest
+  Downloading node.js version 7.8.0 (64-bit)...                                 
+  Complete                                                                      
+  Creating C:\Users\212468457\AppData\Roaming\nvm\temp                          
+                                                                              
+  Downloading npm version 4.2.0... Complete                                     
+  Installing npm v4.2.0...                                                      
+                                                                              
+  Installation complete. If you want to use this version, type                  
+                                                                              
+  nvm use 7.8.0                                                                 
+$ nvm use 7.8.0  
+  Now using node v7.8.0 (64-bit)
+```
+
+---
+
+##### NPM 설치
+- 위 과정까지 마치면 node, npm 명령어 사용 가능
+- [npm](https://www.npmjs.com/): The package manager for JavaScript
+  - **npm도 GE proxy 설정해줘야 함**
+```bash
+$ npm config set http://ge.com:80
+$ npm config set https-proxy http://ge.com:80
+$ npm confg set strict-ssl false
+```
+
+---
+
+##### Express
+- [Express](http://expressjs.com/): Fast, unopinionated, minimalist web framework for Node.js
+- [Express Generator](http://expressjs.com/en/starter/generator.html): to quickly create an express-application skeleton
+- express 설치
+```bash
+$ npm install express -g
+$ npm install express-generator -g
+```
+---
+
+##### Express(Continued)
+- express-generator로 express 앱 생성
+```bash
+$ express test-app --ejs
+   
+   create : test-app
+   create : test-app/package.json
+   create : test-app/app.js
+   ...
+   create : test-app/public/images
+   create : test-app/public/stylesheets
+   create : test-app/public/stylesheets/style.css
+
+   install dependencies:
+     > cd test-app && npm install
+
+   run the app:
+     > SET DEBUG=test-app:* & npm start
+
+   create : test-app/public/javascripts
+   
+$ cd test-app
+```
+---
+##### Express(Continued)
+```bash
+$ ls
+.             app.js        package.json  routes
+..            bin           public        views
+
+$ npm install # 관련 dependency 모듈들 설치
+test-app@0.0.0 D:\workspace\git_repository\test-app
++-- body-parser@1.17.1
+| +-- bytes@2.4.0
+| +-- debug@2.6.1
+...
+| `-- on-headers@1.0.1
+`-- serve-favicon@2.4.2
+  `-- ms@1.0.0
+
+$ npm start # 서버 실행
+
+```
 ---
