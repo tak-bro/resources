@@ -64,6 +64,8 @@
 
 ### Basic Terminal Usage
 ![Terminal Usage](linuxUsage.jpg)
+
+- [bash-guide](https://github.com/Idnan/bash-guide)
 --------
 
 ### Character Encodings

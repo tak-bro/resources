@@ -94,6 +94,7 @@ Web Development
 ### Basic Terminal Usage
 [Basic Linux Commands](https://dl2.pushbulletusercontent.com/yfPJYu3Vp6t5sRiaAtYysOFBdBqjMDO8/asset.JPG)
 
+- [bash-guide](https://github.com/Idnan/bash-guide)
 
 ---
 

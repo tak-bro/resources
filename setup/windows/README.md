@@ -298,6 +298,16 @@ $ sh ~/.vim_runtime/install_awesome_vimrc.sh
   - [Git History](https://donjayamanne.gallery.vsassets.io/_apis/public/gallery/publisher/donjayamanne/extension/githistory/0.2.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage)
   - [Material-Theme](https://zhuangtongfa.gallery.vsassets.io/_apis/public/gallery/publisher/zhuangtongfa/extension/Material-theme/2.2.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage)
 
+
+
+-----------------------------
+
+### JAVA
+- [Jave SE Development Kit](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 설치
+- 
+
+
+
 ------------------------------
 
 ### 윈도우 단축키
