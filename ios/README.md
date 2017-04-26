@@ -1,9 +1,36 @@
 # iOS programming
 
+## GoWith 개발에 참고할 것들
+- [UPCarouselFlowLayout](https://github.com/ink-spot/UPCarouselFlowLayout): A fancy carousel flow layout for UICollectionView on iOS.
+    - [stackoverflow](http://stackoverflow.com/questions/42003296/is-it-possible-to-create-a-scroll-view-with-an-animated-page-control-in-swift)
+
+![demo](https://raw.githubusercontent.com/ink-spot/UPCarouselFlowLayout/master/images/demo.gif)
+
+- [StretchHeader](https://github.com/y-hryk/StretchHeader)
+
+![Demo](https://raw.githubusercontent.com/y-hryk/StretchHeader/master/sample_01.gif)
+![Demo](https://raw.githubusercontent.com/y-hryk/StretchHeader/master/sample_02.gif)
+
+- [MMParallaxCollectionView](https://github.com/MillmanY/MMParallaxCollectionView): Custom CollectionView with Parallax effect
+
+![demo](https://github.com/MillmanY/MMParallaxCollectionView/blob/master/DemoSource/Demo.gif?raw=true)
+
+- [expanding-collection](https://github.com/Ramotion/expanding-collection): ExpandingCollection is a card peek/pop controller
+![demo](https://raw.githubusercontent.com/Ramotion/expanding-collection/master/preview.gif)
+
+- [Google Maps API](https://developers.google.com/maps/documentation/ios-sdk/?hl=ko): iOS 앱에 Google 지도
+
+- [FBAnnotationClusteringSwift](https://github.com/ribl/FBAnnotationClusteringSwift): Swift translation of FB Annotation Clustering, which clusters pins on the map for iOS. 
+![demo](https://github.com/ribl/FBAnnotationClusteringSwift/blob/master/GitHubImages/simulatorShot.png?raw=true)
+- [iOS-MapKit-Tutorial](https://github.com/maximbilan/iOS-MapKit-Tutorial): iOS MapKit Getting Started
+- [mapkit-beginner-guide](http://www.appcoda.com/mapkit-beginner-guide/): Working with MapKit: Annotations and Shape Rendering
+- [mapkit-polyline-polygon](http://www.appcoda.com/mapkit-polyline-polygon): MapKit Beginner’s Guide: Polylines, Polygons, and Callouts
+- [iOS9-day-by-day](https://github.com/shinobicontrols/iOS9-day-by-day): Example 많음, Apple pay, Map
+
 ## Sites
 - swift extension: http://realignist.me/code/2016/06/05/swift-snippets.html
 - http://swift.leantra.kr/
-- https://github.com/JigarM/Infinite-UIITableview-Scroll
+- https://github.com/JigarM/Infin- ite-UIITableview-Scroll
 - http://pjkstory.blogspot.jp/2016/06/swift-2-swift-tableview-infinite-scroll.html
 - https://github.com/johnnyclem/JSON-TableView-in-Swift
 - https://www.raywenderlich.com/113388/storyboards-tutorial-in-ios-9-part-1
