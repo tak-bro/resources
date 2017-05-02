@@ -1,6 +1,7 @@
 # iOS programming
 
-## GoWith 개발에 참고할 것들
+## AUDIGA 개발에 참고할 것들
+- [Add radius and shadow](http://stackoverflow.com/questions/3316424/cant-add-a-corner-radius-and-a-shadow), [other version](http://stackoverflow.com/questions/24644802/swift-problems-with-corner-radius-and-drop-shadow)
 - [UPCarouselFlowLayout](https://github.com/ink-spot/UPCarouselFlowLayout): A fancy carousel flow layout for UICollectionView on iOS.
     - [stackoverflow](http://stackoverflow.com/questions/42003296/is-it-possible-to-create-a-scroll-view-with-an-animated-page-control-in-swift)
 
