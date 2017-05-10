@@ -1,4 +1,16 @@
 # iOS programming
+# infinite scroll on UICollectionView 
+```swift
+override func scrollViewDidScroll(scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        if offsetY > contentHeight - scrollView.frame.size.height {
+            loadSomeDataAndIncreaseDataLengthFunction()
+            self.collectionView.reloadData()
+        }
+    }
+```
+- 코드 테스트는 안해봄
 
 ## AUDIGA 개발에 참고할 것들
 - [Add radius and shadow](http://stackoverflow.com/questions/3316424/cant-add-a-corner-radius-and-a-shadow), [other version](http://stackoverflow.com/questions/24644802/swift-problems-with-corner-radius-and-drop-shadow)
@@ -30,6 +42,7 @@
 - [iOS9-day-by-day](https://github.com/shinobicontrols/iOS9-day-by-day): Example 많음, Apple pay, Map
 
 ## Sites
+- [Some Swift libraries every iOS developer should know about](http://www.oodlestechnologies.com/blogs/Some-Swift-libraries-every-iOS-developer-should-know-about)
 - swift extension: http://realignist.me/code/2016/06/05/swift-snippets.html
 - http://swift.leantra.kr/
 - https://github.com/JigarM/Infin- ite-UIITableview-Scroll
