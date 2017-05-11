@@ -13,6 +13,9 @@ override func scrollViewDidScroll(scrollView: UIScrollView) {
 - 코드 테스트는 안해봄
 
 ## AUDIGA 개발에 참고할 것들
+- [MKMapKit기반 더블탭 확대/축소 방법](https://swifter.kr/2016/05/12/mkmapkit%EA%B8%B0%EB%B0%98-%EB%8D%94%EB%B8%94%ED%83%AD-%ED%99%95%EB%8C%80%EC%B6%95%EC%86%8C-%EB%B0%A9%EB%B2%95/)
+- [Mapkit 사용법](http://m.blog.naver.com/zll11/220744646888)
+- [MKPointAnnotations touch event in swift](http://stackoverflow.com/questions/26991473/mkpointannotations-touch-event-in-swift)
 - [Add radius and shadow](http://stackoverflow.com/questions/3316424/cant-add-a-corner-radius-and-a-shadow), [other version](http://stackoverflow.com/questions/24644802/swift-problems-with-corner-radius-and-drop-shadow)
 - [shadow with blur](http://stackoverflow.com/questions/34269399/how-to-control-shadow-spread-and-blur)
 - [UPCarouselFlowLayout](https://github.com/ink-spot/UPCarouselFlowLayout): A fancy carousel flow layout for UICollectionView on iOS.
