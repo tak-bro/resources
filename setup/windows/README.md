@@ -285,6 +285,19 @@ $ sh ~/.vim_runtime/install_awesome_vimrc.sh
       "http.proxy": "http://..........:80"
   }
   ```
+
+- Install extensions
+  - [Open in User-defined Console](https://marketplace.visualstudio.com/items?itemName=vilicvane.console)
+  - Add below settins
+
+```json
+{
+    "console.executable": "cmd.exe",
+    "console.args": "/s /c \"\"D:\\유틸\\ConEmuPack.150813c\\ConEmu64.exe\" /single\"" // should change path
+}
+```
+
+
 - Download link for installed extensions
   - [VIM](https://vscodevim.gallery.vsassets.io/_apis/public/gallery/publisher/vscodevim/extension/Vim/0.6.5/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage)
   - [XML Tools](https://DotJoshJohnson.gallery.vsassets.io/_apis/public/gallery/publisher/DotJoshJohnson/extension/xml/1.7.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage)
