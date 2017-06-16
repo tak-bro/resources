@@ -1,5 +1,74 @@
 # 윈도우 개발환경 세팅 in company
 
+### Android
+- [Android Studio](https://developer.android.com/studio/index.html?hl=ko)에서 IDE 다운로드 및 설치
+- 프록시 설정
+  - Auto-detect proxy settings
+- Standard로 셋업
+- SDK 다운
+
+#### Gradle Error
+- 처음 프로젝트 만들거나 import 하면 gradle 관련 에러 발생
+  - Failed to ... 'junit'..
+- Gradle 프록시 설정 해줘야 함
+- Solution
+  - Offline 설정으로 gradle 파일 받아서 설정 -> 안됨
+  - gradle.properties 수정
+
+```
+systemProp.http.proxyHost=...ge.com
+systemProp.http.proxyPort=80
+systemProp.http.proxyUser=
+systemProp.http.proxyPassword=
+systemProp.http.nonProxyHosts=
+```
+
+> 한가지 주의할 점은 "www.somehost.org"와 같이 URL을 넣어야 하는데, "http://www.somehost.org"와 같은 형태로 넣어주면, 정상적인 결과를 얻을수 없는 점만 주의 해야 한다. 또는 IP address를 직접 넣어 주는 것이 확인하기도 수월할 것이다.
+> 
+> 참고: http://happyzoo.kr/m/202
+
+  - build.gradle 수정
+
+```
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        //jcenter()
+        jcenter { url 'http://jcenter.bintray.com' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.2'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter { url 'http://jcenter.bintray.com' }
+        //jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+출처: http://superfelix.tistory.com/366 [☼ 꿈꾸는 도전자 Felix !]
+```
+
+#### Perforce 프로젝트에서 가져오기
+- File -> New -> Import -> 안드로이드 프로젝트
+- gradle.properties 없어서 따로 만들어 줌
+  - 위에서 한 프록시 세팅
+- build.gradle도 수정
+- Android SDK 19 다운 
+
+---
+
+
 ### Chocolatey
 - [Chocolatey](https://chocolatey.org/): The package manager for Windows
 - Install powershell.
