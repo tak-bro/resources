@@ -68,7 +68,6 @@ task clean(type: Delete) {
 
 ---
 
-
 ### Chocolatey
 - [Chocolatey](https://chocolatey.org/): The package manager for Windows
 - Install powershell.
@@ -304,6 +303,8 @@ task clean(type: Delete) {
 
 ### VIM
 - gVim 설치
+
+```
 ~~- spf13-vim: a distribution of vim plugins and resources for Vim, Gvim and MacVim.~~
    ~~- [https://github.com/spf13/spf13-vim](https://github.com/spf13/spf13-vim)~~
 ~~- Install spf13-vim (처리하는데 좀 느림. 프록시 때문인지..)~~
@@ -312,6 +313,8 @@ task clean(type: Delete) {
 ~~$ choco install spf13-vim~~
 ~~```~~
 ~~- 설치되는게 너무 많다. 나중에 지울 필요 있음~~
+```
+
 - [https://github.com/amix/vimrc](https://github.com/amix/vimrc)
 ```bash
 $ git clone https://github.com/amix/vimrc.git ~/.vim_runtime
@@ -393,6 +396,11 @@ $ sh ~/.vim_runtime/install_awesome_vimrc.sh
 ------------------------------
 
 ### 윈도우 단축키
+- set proxy
+```
+$ set http_proxy=http://.....:port
+$ set https_proxy=http://.....:port
+```
 - 윈도우 단축키 
   - 윈도우 키 + E : 윈도우 탐색기 실행 / 내컴퓨터와 동일
   - 윈도우 키 + F : 윈도우 검색창 실행 / 시작-검색과 동일
