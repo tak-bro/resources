@@ -302,6 +302,8 @@ task clean(type: Delete) {
 ---------------------------
 
 ### VIM
+- Cmder로 하면 설치 안됨
+  - git bash 이용할 것
 - gVim 설치
 
 ```
@@ -322,10 +324,21 @@ $ sh ~/.vim_runtime/install_awesome_vimrc.sh
 ```
 - 로딩하는데 오래걸려서 extension은 지움 
   - .vimrc 파일 수정 
+- Install Vundle on Git Bash
+  - Download Vundle
+  ```
+  $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  ```
+  - Launch vim and run ```:PluginInstall```
+
 
 #### Tips
 - Key map
-  - <C-S-UP>: Ctrl + Shift + Arrow Up key
+
+```
+<C-S-UP>: Ctrl + Shift + Arrow Up key
+```
+
 - Ctrl + a:  숫자 증가
   - 매크로 활용 가능
   ```bash 
