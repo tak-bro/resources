@@ -1,6 +1,28 @@
 # 윈도우 개발환경 세팅 in company
 
-### Windows10
+## Windows10
+- Cmd as admin
+  - Ctrl+Esc -> type "cmd" -> Right-click "open file location"
+  - Right-Click on Command Prompt
+  - Shortcut -> Advanced -> check Run as administrator
+
+- Install Chocolatey and Peco
+  - Run cmd and type below
+```
+$ @powershell -NoProfile -ExecutionPolicy Bypass -Command "[System.Net.WebRequest]::DefaultWebProxy.Credentials = [System.Net.CredentialCache]::DefaultCredentials; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH="%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+```
+  - install peco
+```
+$ choco install peco
+```
+
+- Install ConEmu
+  - [Download ConEmu](https://www.fosshub.com/ConEmu.html) // alpha version
+  
+- Set vim
+  - Install vim74
+ 
+  
 - TODO
 ```
 @echo off
@@ -23,8 +45,8 @@ cd C:\Users\......
 var..2015... -Maru
 ```
 
--------
-
+-----------------------
+## Windows7
 ### Android
 - [Android Studio](https://developer.android.com/studio/index.html?hl=ko)에서 IDE 다운로드 및 설치
 - 프록시 설정
