@@ -1,5 +1,30 @@
 # 윈도우 개발환경 세팅 in company
 
+### Windows10
+- TODO
+```
+@echo off
+echo ========== Set P4 variable
+
+set P4USER=hyungtak.jin
+set P4CLIENT=...
+set P4PORT=...
+
+echo P4USER=%P4USER%
+echo P4CLIENT=%P4CLIENT%
+echo P4PORT=%P4PORT%
+
+echo ========== Move to root folder and sync latest version
+cd C:\Users....
+p4 sync
+
+echo ========== Run vars_VS2015.bat
+cd C:\Users\......
+var..2015... -Maru
+```
+
+-------
+
 ### Android
 - [Android Studio](https://developer.android.com/studio/index.html?hl=ko)에서 IDE 다운로드 및 설치
 - 프록시 설정
