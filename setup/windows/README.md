@@ -1,27 +1,50 @@
 # 윈도우 개발환경 세팅 in company
 
 ## Windows10
-- Cmd as admin
+- Set cmd as admin
   - Ctrl+Esc -> type "cmd" -> Right-click "open file location"
   - Right-Click on Command Prompt
   - Shortcut -> Advanced -> check Run as administrator
 
-- Install Chocolatey and Peco
-  - Run cmd and type below
-```
-$ @powershell -NoProfile -ExecutionPolicy Bypass -Command "[System.Net.WebRequest]::DefaultWebProxy.Credentials = [System.Net.CredentialCache]::DefaultCredentials; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH="%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
-```
-  - install peco
-```
-$ choco install peco
-```
-
-- Install ConEmu
-  - [Download ConEmu](https://www.fosshub.com/ConEmu.html) // alpha version
-  
-- Set vim
-  - Install vim74
+- Install programs
+  - Please follow below steps
+  - Install Chocolatey and Peco
+    - Run cmd and type below
+    ```
+    $ @powershell -NoProfile -ExecutionPolicy Bypass -Command "[System.Net.WebRequest]::DefaultWebProxy.Credentials = [System.Net.CredentialCache]::DefaultCredentials; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH="%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+    ```
+  - install peco and wget
+  ```
+  $ choco install peco
+  $ choco install wget
+   # Set wget proxy
+  $ set http_proxy=http://......:80
+  $ set https_proxy=https://....:80
  
+  ```
+  - Install ConEmu
+    - [Download ConEmu](https://www.fosshub.com/ConEmu.html) // alpha version
+  - Install [Docker](https://store.docker.com/editions/community/docker-ce-desktop-windows)
+  - Set vimrc
+    - run **Git bash**
+    ```
+    $ git clone https://github.com/amix/vimrc.git ~/.vim_runtime
+    $ sh ~/.vim_runtime/install_awesome_vimrc.sh
+    $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    ```
+    - run vim and type ```:PluginInstall```
+      - above should be executed on gVim and terminal's vim
+    - Move colortheme to C:\Program Files (x86)\Vim\vim74\colors
+    ```
+    $ wget https://raw.githubusercontent.com/romainl/Apprentice/master/colors/apprentice.vim  // apprentice
+    $ wget https://raw.githubusercontent.com/altercation/vim-colors-solarized/master/colors/solarized.vim // solarized
+    ```
+    
+  - Install [Git for windows](https://git-for-windows.github.io/)
+    ```
+    $ git config --global http.proxy http://..ge....../
+    ```
+    - Install [git-flow](https://github.com/nvie/gitflow/wiki/Windows#git-for-windows-previously-msysgit)
   
 - TODO
 ```
