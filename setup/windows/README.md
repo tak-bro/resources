@@ -8,23 +8,33 @@
 
 - Install programs
   - Please follow below steps
-  - Install Chocolatey and Peco
+  - Install Chocolatey
     - Run cmd and type below
     ```
     $ @powershell -NoProfile -ExecutionPolicy Bypass -Command "[System.Net.WebRequest]::DefaultWebProxy.Credentials = [System.Net.CredentialCache]::DefaultCredentials; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH="%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
     ```
-  - install peco and wget
+  - install peco and wget w/ Choclatey
   ```
   $ choco install peco
   $ choco install wget
    # Set wget proxy
   $ set http_proxy=http://......:80
   $ set https_proxy=https://....:80
- 
   ```
   - Install ConEmu
     - [Download ConEmu](https://www.fosshub.com/ConEmu.html) // alpha version
-  - Install [Docker](https://store.docker.com/editions/community/docker-ce-desktop-windows)
+    - Create vi.bat file to C:\Windows\System32
+    ```@echo off vim %*```
+    - Set keyboard
+      - Ctrl + Shift + t: Split-duplicate active 'shell' split to **bottom**
+      - Ctrl + t: Split-duplicate active 'shell' split to **right**
+      - Ctrl + n: {bash: admin}
+      - Ctrl + Shift + n: Create new console(after 'Create confirmation')
+      - Ctrl + w: Close active console: Close(0)
+      - Ctrl + Shift + Left: Split: Put focues to...
+      - Ctrl + L: print("\ecls\n") on GUI macro
+    
+ - Install [Docker](https://store.docker.com/editions/community/docker-ce-desktop-windows)
   - Set vimrc
     - run **Git bash**
     ```
@@ -41,8 +51,9 @@
     ```
     
   - Install [Git for windows](https://git-for-windows.github.io/)
+    - check "Run Git and included Unix tools...."
     ```
-    $ git config --global http.proxy http://..ge....../
+    $ git config --global http.proxy http://..ge......:80
     ```
     - Install [git-flow](https://github.com/nvie/gitflow/wiki/Windows#git-for-windows-previously-msysgit)
   
