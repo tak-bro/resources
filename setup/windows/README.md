@@ -21,7 +21,7 @@
   $ set http_proxy=http://......:80
   $ set https_proxy=https://....:80
   ```
-  - Install ConEmu
+  - Install ConEmu or **Cmder**
     - [Download ConEmu](https://www.fosshub.com/ConEmu.html) // alpha version
     - Create vi.bat file to C:\Windows\System32
     ```@echo off vim %*```
@@ -30,7 +30,7 @@
       - Ctrl + t: Split-duplicate active 'shell' split to **right**
       - Ctrl + n: {bash: admin}
       - Ctrl + Shift + n: Create new console(after 'Create confirmation')
-      - Ctrl + w: Close active console: Close(0)
+      - Ctrl + w: Close active console: Close(0) --> **to None**
       - Ctrl + Shift + Left: Split: Put focues to...
       - Ctrl + L: print("\ecls\n") on GUI macro
     
