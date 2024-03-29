@@ -28,7 +28,6 @@
 - [Xcode](https://developer.apple.com/kr/xcode/): 앱스토어에서 설치
 - [카카오톡](https://www.kakaocorp.com/service/KakaoTalk): 앱스토어에서 설치
 - [Pock](https://pock.dev): display macOS Dock in Touch Bar(터치바 모델만)
-- [Sip](https://sipapp.io): color picker(앱스토어에서 설치) => 유료로 바뀐듯
 
 ### CLI
 - [Homebrew](https://brew.sh/index_ko): macOS용 패키지 관리자
@@ -37,7 +36,7 @@
   ```
 - Cocoapods
 ```shell
-$ sudo gem install cocoapods
+$ brew install cocoapods
 ```
 - [git](https://git-scm.com), [git-lfs](https://git-lfs.github.com), [git-flow](https://danielkummer.github.io/git-flow-cheatsheet/index.ko_KR.html)
   ```shell
@@ -53,7 +52,7 @@ $ sudo gem install cocoapods
   $ brew cask install iterm2
   ```
   - Preference ⇒ Profiles ⇒ Session ⇒ check `Status bar enabled`
-    - Background Color: `272935`
+    - Background Color: `272935` => 이건 변경해야할듯
   - Appearance ⇒ General ⇒ Status bar location ⇒ `Bottom`
   - Preference ⇒ Keys ⇒ Hoykey ⇒ check `Show/hide all windows...`
     - Hotkey 키 바인딩: `F12`
@@ -80,7 +79,7 @@ $ sudo gem install cocoapods
   # zsh-syntax-highlighting
   $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
   # zsh-autosuggestions
-  $ git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+  $ git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
   # add plugins
   $ vi ~/.zshrc
   ...
@@ -92,6 +91,8 @@ $ sudo gem install cocoapods
   )
   ...
   ```
+- [fzf](https://github.com/junegunn/fzf) brew install fzf
+
 - zsh 테마
 ```shell
 $ brew install nodejs
@@ -124,13 +125,74 @@ set -g mouse on
 set -g status-keys vi
 set -g mode-keys vi
 ```
-- tmuxinator 스크립트 추가
+- tmuxinator 스크립트 추가 => 이거 안됨...
 ```
 $ mkdir ~/bin
-$ wget https://raw.githubusercontent.com/colmarius/dot-files/master/files/bin/work -O ~/bin/tmux-worker
-$ chmd 755 ~/bin/tmux-worker
+$ vi ~/bin/tmux-worker
+```
+
+```
+#!/bin/bash
+
+display_usage() {
+  echo "This script is used to start tmuxinator project sessions."
+  echo -e "\nAvailable sessions:\n"
+
+  for session in `ls ~/.tmuxinator | sed -e 's/\..*$//'`; do
+    echo -e "\t${session%.*}"
+  done
+
+  echo -e "\nExample usage:\n"
+  echo -e "\twork on project"
+  echo -e "\twork off project\n"
+}
+
+if [ $# -ne 2 ]; then
+  display_usage
+  exit 1
+fi
+
+operation=$1
+tmuxinator_config=$2
+
+if [ $operation == "on" ]
+  then
+  tmux has-session -t $tmuxinator_config 2> /dev/null
+
+  if [ $? != 0 ]
+  then
+    tmuxinator start $tmuxinator_config
+  else
+    echo "tmux: $tmuxinator_config session is already running."
+  fi
+fi
+
+if [ $operation == "off" ]
+  then
+  tmux has-session -t $tmuxinator_config 2> /dev/null
+
+  if [ $? == 0 ]
+  then
+    for i in `seq 1 10`;
+    do
+      tmux send-keys -t $tmuxinator_config:$i.1 C-c C-m
+      tmux send-keys -t $tmuxinator_config:$i.2 C-c C-m
+      tmux send-keys -t $tmuxinator_config:$i.3 C-c C-m
+    done
+
+    tmux kill-session -t $tmuxinator_config
+  else
+    echo "tmux: no $tmuxinator_config session found."
+  fi
+fi
+```
+
+```
+$ wget https://raw.githubusercontent.com/colmarius/dot-files/master/files/bin/work -O ~/bin/tmux-worker # 이거 안됨
+$ chmod 755 ~/bin/tmux-worker
 $ echo 'export PATH=${PATH}:~/bin' >> ~/.zshrc
 $ source ~/.zshrc
+
 ```
   - `tmux-worker` test
   ```
@@ -148,11 +210,12 @@ $ source ~/.zshrc
   $ tmux-worker start test
   $ tmux-worker stop test
   ```
+
 - [Neovim](https://neovim.io): Vim-fork focused on extensibility and usability
 ```
 $ brew install neovim
 $ brew tap homebrew/cask-fonts
-$ brew cask install font-hack-nerd-font
+$ brew --cask install font-hack-nerd-font
 $ echo 'alias vim="nvim"
 alias vi="nvim"
 alias vimdiff="nvim -d"
@@ -209,8 +272,8 @@ $ source ~/.zshrc
 ```
 - [exa](https://github.com/ogham/exa): A modern version of ‘ls’.
 ```
-$ brew install exa
-$ echo 'alias ls="exa"' >> ~/.zshrc
+$ brew install eza
+$ echo 'alias ls="eza"' >> ~/.zshrc
 $ source ~/.zshrc
 ```
 - [bat](https://github.com/sharkdp/bat): A cat(1) clone with wings.
