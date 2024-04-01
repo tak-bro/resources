@@ -318,6 +318,12 @@ $ brew install scc
 $ npm install -g lerna
 ```
 
+- fkill
+$ npm install --global fkill-cli
+
+- fx
+$ brew install fx
+
 ### ETC
 
 - 한글에서 ₩ 대신 \` 사용. 재부팅 필요
