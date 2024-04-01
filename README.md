@@ -13,6 +13,17 @@
     - `Show recent applications in Dock`: False
 - Bluetooth
     - `Show Bluetooth in menu bar`: True
+- Keyboard => Keyboard shorcuts => Screenshots => `Copy picture of selected ared to the clipboard` => command + shift + s
+
+### PC 이름 변경
+
+```
+sudo scutil --set ComputerName "newname"
+sudo scutil --set LocalHostName "newname"
+sudo scutil --set HostName "newname"
+dscacheutil -flushcache # Flush the DNS cache by typing 
+# Restart your Mac.
+```
 
 ### Programs
 - [VSCode](https://code.visualstudio.com): 코드 편집기
